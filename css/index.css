@@ -1,0 +1,53 @@
+body {
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+section {
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+section h3 {
+    height: 30px;
+    font-size: 24px;
+    margin: 0;
+}
+
+.charts {
+    width: 100%;
+    height: 570px;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+}
+
+.bar {
+    border: 1px solid gray;
+    width: 44px;
+}
+
+.bar:nth-child(1) {
+    background: #00FF00;
+}
+
+.bar:nth-child(2) {
+    background: #FFD700;
+}
+
+.bar:nth-child(3) {
+    background: #FA8072;
+}
+
+.bar:nth-child(4) {
+    background: #00BFFF;
+}
+
+.bar:nth-child(5) {
+    background: #2F4F4F;
+}

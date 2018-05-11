@@ -1,39 +1,21 @@
 window.onload = () => {
 
-    d3.select("#bars").append("h3").text("Bars");
+    let section = d3.select("section");
+    section.attr("id", "bar-chart")
+        .style("width", "800px")
+        .style("height", "600px")
+        .style("margin", "0 auto")
+        .style("background", "#99CCFF")
+        .style("border", "1px solid black")
+        .style("display", "flex")
+        .style("align-items", "flex-end")
+        .style("justify-content", "space-between");
 
-    d3.select("h3").remove("h3");
+    d3.select("#bar-chart").append("div").attr("class", "bar").style("background", "#003366").style("width", "50px");
 
-    d3.select("#bars").insert("h3", "div").text("Bars");
+    let arr = [150, 270, 64, 402, 50];
 
-    d3.select("h3").style("color", "blue").style("width", "400px").style("border", "1px solid red").style("margin", "0 auto");
-
-    d3.select("#bars").select("div").attr("class", "charts");
-
-
-    let numbers = [100, 50, 255, 33, 223, 153]; /* Data array */
-
-
-    /*let bars = d3.selectAll(".bar"); /* Select all bars */
-    /*bars.data(numbers); /* connect the data with the bars */
-    /* d3.selectAll(".bar").data(numbers); /* chaining in D3 */
-    /*bars.text((d) => {
-        return d;
-    })*/
-
-    /*enter*/
-    d3.select(".container").selectAll(".bar").data(numbers).enter().append('div').attr("class", "bar");
-
-    /*update*/
-    d3.selectAll(".bar").data(numbers).style("height", function (d) {
+    d3.selectAll(".bar").data(arr).style("height", function (d) {
         return d + "px";
-    }).text((d) => {
-        return d;
     });
-
-    /*exit*/
-    d3.selectAll(".bar").data(numbers).exit().remove();
-
-
-
 }
